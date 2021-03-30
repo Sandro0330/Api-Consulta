@@ -44,7 +44,7 @@ public class MoneyExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 	
 	@ExceptionHandler({EmptyResultDataAccessException.class})
-	
+
 	public ResponseEntity<Object> handleEmptyResultDataAccessException(EmptyResultDataAccessException ex, WebRequest request) {
 		String mensagemUsuario = messageSource.getMessage("codigo.nao-encontrado", null, LocaleContextHolder.getLocale());
 		String mensagemDesenvolvedor = ex.toString();
